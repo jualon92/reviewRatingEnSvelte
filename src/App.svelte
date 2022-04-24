@@ -26,9 +26,11 @@
 	
 	$: average = feedback.reduce( (a, {rating}) => a + rating, 0) / feedback.length
 	
-	const addFeedback = (e) => {
+	const addFeedback = (e) => { // toma parametro  pasados por dispatch
 		const newFeedback = e.detail
+		console.log(e.detail)
 		feedback = [newFeedback, ...feedback]
+		 
 	}
 	const deleteFeedback = (e) => {
 		const itemId = e.detail
@@ -39,7 +41,7 @@
 
 <main class="container">
  
-	<FeedbackForm on:add-feedback={addFeedback}/> 
+	<FeedbackForm on:agregar-feedback={addFeedback}/> 
   <FeedbackStats {count} {average}/> 
 	<FeedbackList {feedback} on:delete-feedback={deleteFeedback}/>
 </main>

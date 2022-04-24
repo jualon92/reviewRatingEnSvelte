@@ -8,8 +8,9 @@
 
     const onChange = (e) => {
         let valor = e.currentTarget.value;
-        console.log(valor)
+        
         selected = valor
+       
         dispatch("rating-select", selected)
     };
 </script>
