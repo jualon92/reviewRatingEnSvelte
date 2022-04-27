@@ -2,8 +2,7 @@
 	import FeedbackForm from "./components/FeedbackForm.svelte";
 	import FeedbackList from "./components/FeedbackList.svelte";
 	import FeedbackStats from "./components/FeedbackStats.svelte"
-	import RatingSelect from "./components/RatingSelect.svelte"
-	
+ 
 	let feedback = [
 		{
 			id: 1,
@@ -23,16 +22,6 @@
 	];
 
 	 
-	const addFeedback = (e) => { // toma parametro  pasados por dispatch
-		const newFeedback = e.detail
-		console.log(e.detail)
-		feedback = [newFeedback, ...feedback]
-		 
-	}
-	const deleteFeedback = (e) => {
-		const itemId = e.detail
-		feedback = feedback.filter( (item) => item.id != itemId)
-	}
 
 </script>
 

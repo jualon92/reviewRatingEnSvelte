@@ -25,4 +25,16 @@ ul {
 	margin-right: 3%;
 }
 
+@media (max-width:700px){
+  .rating{
+    flex-wrap:wrap;
+    row-gap: 10px;
+    column-gap: 2px;
+  }
+
+  .card{
+    padding-left:1.2rem!important;
+    padding-right:1.2rem!important;
+  }
+}
  
