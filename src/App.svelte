@@ -22,10 +22,7 @@
 		},
 	];
 
-	$: count = feedback.length
-	
-	$: average = feedback.reduce( (a, {rating}) => a + rating, 0) / feedback.length
-	
+	 
 	const addFeedback = (e) => { // toma parametro  pasados por dispatch
 		const newFeedback = e.detail
 		console.log(e.detail)
@@ -41,9 +38,9 @@
 
 <main class="container">
  
-	<FeedbackForm on:agregar-feedback={addFeedback}/> 
-  <FeedbackStats {count} {average}/> 
-	<FeedbackList {feedback} on:delete-feedback={deleteFeedback}/>
+	<FeedbackForm  /> 
+  <FeedbackStats /> 
+	<FeedbackList {feedback}/>
 </main>
 
 <style>

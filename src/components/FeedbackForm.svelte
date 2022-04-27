@@ -1,11 +1,11 @@
 <script>
     import { v4 as uuidv4 } from "uuid";
-    import { createEventDispatcher } from "svelte";
+
+    import { FeedbackStore } from "../stores";
     import Card from "./Card.svelte";
     import Button from "./Button.svelte";
     import RatingSelect from "./RatingSelect.svelte";
 
-    const dispatch = createEventDispatcher();
     let text = "";
     let btnDisabled = true;
     let min = 10;
@@ -23,19 +23,21 @@
     };
 
     const handleSelect = (e) => {
-        rating = e.detail
+        rating = e.detail;
     };
 
     const handleSubmit = () => {
-       
         if (text.trim().length > min) {
             const nuevoFeedback = {
                 id: uuidv4(), //custom id random
                 text,
                 rating: rating, //unary operator
             };
-         
-            dispatch("agregar-feedback", nuevoFeedback) // volver aguas arriba
+
+            FeedbackStore.update((currentFeedback) => {
+                return [nuevoFeedback, ...currentFeedback];
+            });
+            text = ""; //borrar texto cuando se envia
         }
     };
 </script>
@@ -43,7 +45,8 @@
 <Card>
     <header>Como calificarias nuestro servicio?</header>
     <form on:submit|preventDefault={handleSubmit}>
-        <RatingSelect on:rating-select={handleSelect} /> <!--me das parametro, y trabajo aca. -->
+        <RatingSelect on:rating-select={handleSelect} />
+        <!--me das parametro, y trabajo aca. -->
         <!--Rating select-->
         <div class="input-group">
             <input
