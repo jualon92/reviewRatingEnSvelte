@@ -11,6 +11,8 @@ app.get('*', (req, res) => {  //index html entrada
     res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
   });
 
-  app.listen(port, '0.0.0.0');
+  app.listen(process.env.PORT || 3001, '0.0.0.0', () => {
+    console.log("Server is running.");
+  });
 
    
