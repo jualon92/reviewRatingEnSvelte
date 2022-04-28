@@ -11,6 +11,6 @@ app.get('*', (req, res) => {  //index html entrada
     res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
   });
 
+  app.listen(process.env.PORT, '0.0.0.0');
 
-  app.listen(port, () => //prueba 
-  console.log(`Server is running on: http://localhost:${port}`)); 
+   
