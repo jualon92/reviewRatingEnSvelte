@@ -1,18 +1,15 @@
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 5000;
+const cors = require('cors');
 const path = require('path');
-
- 
-const PORT = process.env.PORT || 3000;
-
-app.use(express.static('public')); //que utilize public
-//app.use('/build', express.static('public/build'))
+app.use(cors());
 
 
-app.get('*', (req, res) => {  //index html entrada
-    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+app.use(express.static('public'));
+app.get('*', (req, res) => {
+   res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
- 
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${PORT}`);
+app.listen(port, () => {
+   console.log(`Server is up at port ${port}`);
 });
