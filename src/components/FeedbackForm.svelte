@@ -69,6 +69,7 @@
     header {
         max-width: 400px;
         margin: auto;
+        text-align: center;
     }
    
     .input-group {
