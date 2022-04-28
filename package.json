@@ -5,7 +5,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear"
+    "start": "sirv public --no-clear",
+    "heroku-postbuild": "npm run build"
   },
   "engines": {
     "node": "16.x"
@@ -26,4 +27,5 @@
     "sirv-cli": "^2.0.0",
     "uuid": "^8.3.2"
   }
+  
 }
