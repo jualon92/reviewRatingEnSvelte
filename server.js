@@ -5,8 +5,8 @@ const path = require('path');
  
 const PORT = process.env.PORT || 3000;
 
-//app.use(express.static('public')); //que utilize public
-app.use('/build', express.static('public/build'))
+app.use(express.static('public')); //que utilize public
+//app.use('/build', express.static('public/build'))
 
 
 app.get('*', (req, res) => {  //index html entrada
