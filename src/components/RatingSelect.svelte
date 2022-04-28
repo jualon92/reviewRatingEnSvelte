@@ -1,17 +1,16 @@
 <script>
-    import {createEventDispatcher} from "svelte"
+    import { createEventDispatcher } from "svelte";
 
-    const dispatch = createEventDispatcher()
-
+    const dispatch = createEventDispatcher();
 
     let selected = 10;
 
     const onChange = (e) => {
         let valor = e.currentTarget.value;
-        
-        selected = valor
-       
-        dispatch("rating-select", selected)
+
+        selected = valor;
+
+        dispatch("rating-select", selected);
     };
 </script>
 
@@ -170,5 +169,13 @@
     [type="radio"]:checked ~ label {
         background: #ff6a95;
         color: #fff;
+    }
+
+    @media (max-width: 700px) {
+        .rating {
+            flex-wrap: wrap;
+            row-gap: 10px;
+            column-gap: 2px;
+        }
     }
 </style>
