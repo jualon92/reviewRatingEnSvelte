@@ -7,12 +7,11 @@ Borrar o agregar feedback afecta Numero y Promedio de Reviews.  Se valida que co
  - Flexbox para comportamiento responsive 
  
 
- 
+
+![image](https://user-images.githubusercontent.com/46230600/165804460-b3f6c97e-b4dd-4e32-8ceb-bda8886959f5.png)
+![image](https://user-images.githubusercontent.com/46230600/165804500-9ac457f4-2cda-4173-9c67-62de17ee8651.png)
 
 
-![image](https://user-images.githubusercontent.com/46230600/165802911-5eca8523-4986-44f3-8b68-59583490f58b.png)
-![image](https://user-images.githubusercontent.com/46230600/165802985-69c6c1df-e1c3-4a56-81d3-660afd50324a.png)
-![image](https://user-images.githubusercontent.com/46230600/165803230-2d34bce1-3d0d-4488-bd44-92ca781f29b7.png)
 
 
 Basado en : https://www.youtube.com/watch?v=3TVy6GdtNuQ&t=1850s 
