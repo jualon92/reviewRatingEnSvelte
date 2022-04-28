@@ -1,7 +1,7 @@
 <script>
     import {FeedbackStore} from "../stores"
     import { fade, scale } from "svelte/transition"
-    import FeedbackItem from "./feedbackItem.svelte"
+    import FeedbackItem from "./FeedbackItem.svelte"
    
    
      
