@@ -70,11 +70,7 @@
         max-width: 400px;
         margin: auto;
     }
-    header h2 {
-        font-size: 22px;
-        font-weight: 600;
-        text-align: center;
-    }
+   
     .input-group {
         display: flex;
         flex-direction: row;
