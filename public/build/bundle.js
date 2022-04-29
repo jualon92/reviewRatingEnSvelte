@@ -2540,10 +2540,10 @@ var app = (function () {
     			h41 = element("h4");
     			t3 = text("Rating Promedio: ");
     			t4 = text(t4_value);
-    			add_location(h40, file$1, 14, 4, 490);
-    			add_location(h41, file$1, 15, 4, 520);
+    			add_location(h40, file$1, 14, 4, 486);
+    			add_location(h41, file$1, 15, 4, 516);
     			attr_dev(div, "class", "feedback-stats svelte-e1d7fg");
-    			add_location(div, file$1, 13, 0, 456);
+    			add_location(div, file$1, 13, 0, 452);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
