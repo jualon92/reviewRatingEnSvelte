@@ -1,15 +1,25 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 5000;
-const cors = require('cors');
-const path = require('path');
-app.use(cors());
+import Mongo_db from "./model/db_Mongo.js"
+import routerItem from "./router/item.js"
+import config from "./config.js"
+import express from 'express'
+import cors from "cors"
+import path from 'path';
+import compression from "compression"
 
+const app = express()
+const port = config.PORT;
+ 
+ 
+app.use(cors());
+app.use(compression());
+Mongo_db.conectarDB()
 
 app.use(express.static('public'));
-app.get('*', (req, res) => {
-   res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
-});
+
+ 
+app.use("/items", routerItem)
+
+
 app.listen(port, () => {
    console.log(`Server is up at port ${port}`);
 });
