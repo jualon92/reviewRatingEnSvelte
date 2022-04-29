@@ -9,7 +9,7 @@
         let valor = e.currentTarget.value;
 
         selected = valor;
-      
+         
         dispatch("rating-select", selected);
     };
 </script>

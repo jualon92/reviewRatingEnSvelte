@@ -26,7 +26,7 @@
         rating = e.detail;
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         if (text.trim().length > min) {
             const nuevoFeedback = {
                 id: uuidv4(), //custom id random
@@ -34,9 +34,26 @@
                 rating: rating, //unary operator
             };
 
+
+            const d = async () => {
+                const rawResponse = await fetch("items", {
+                    method: "POST",
+                    headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(nuevoFeedback)
+                });
+                const content = await rawResponse.json();
+                
+                console.log(content);
+            };
+
+            d()
             FeedbackStore.update((currentFeedback) => {
                 return [nuevoFeedback, ...currentFeedback];
             });
+
             text = ""; //borrar texto cuando se envia
         }
     };
@@ -71,7 +88,7 @@
         margin: auto;
         text-align: center;
     }
-   
+
     .input-group {
         display: flex;
         flex-direction: row;

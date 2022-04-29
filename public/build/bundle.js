@@ -542,6 +542,12 @@ var app = (function () {
             }
         };
     }
+
+    const globals = (typeof window !== 'undefined'
+        ? window
+        : typeof globalThis !== 'undefined'
+            ? globalThis
+            : global);
     function outro_and_destroy_block(block, lookup) {
         transition_out(block, 1, 1, () => {
             lookup.delete(block.key);
@@ -1391,122 +1397,122 @@ var app = (function () {
     			input0.value = "1";
     			input0.checked = input0_checked_value = /*selected*/ ctx[0] === 1;
     			attr_dev(input0, "class", "svelte-kw4tmt");
-    			add_location(input0, file$5, 18, 8, 358);
+    			add_location(input0, file$5, 18, 8, 361);
     			attr_dev(label0, "for", "num1");
     			attr_dev(label0, "class", "svelte-kw4tmt");
-    			add_location(label0, file$5, 26, 8, 557);
+    			add_location(label0, file$5, 26, 8, 560);
     			attr_dev(li0, "class", "svelte-kw4tmt");
-    			add_location(li0, file$5, 17, 4, 344);
+    			add_location(li0, file$5, 17, 4, 347);
     			attr_dev(input1, "type", "radio");
     			attr_dev(input1, "id", "num2");
     			attr_dev(input1, "name", "rating");
     			input1.value = "2";
     			input1.checked = input1_checked_value = /*selected*/ ctx[0] === 2;
     			attr_dev(input1, "class", "svelte-kw4tmt");
-    			add_location(input1, file$5, 29, 8, 615);
+    			add_location(input1, file$5, 29, 8, 618);
     			attr_dev(label1, "for", "num2");
     			attr_dev(label1, "class", "svelte-kw4tmt");
-    			add_location(label1, file$5, 37, 8, 814);
+    			add_location(label1, file$5, 37, 8, 817);
     			attr_dev(li1, "class", "svelte-kw4tmt");
-    			add_location(li1, file$5, 28, 4, 601);
+    			add_location(li1, file$5, 28, 4, 604);
     			attr_dev(input2, "type", "radio");
     			attr_dev(input2, "id", "num3");
     			attr_dev(input2, "name", "rating");
     			input2.value = "3";
     			input2.checked = input2_checked_value = /*selected*/ ctx[0] === 3;
     			attr_dev(input2, "class", "svelte-kw4tmt");
-    			add_location(input2, file$5, 40, 8, 872);
+    			add_location(input2, file$5, 40, 8, 875);
     			attr_dev(label2, "for", "num3");
     			attr_dev(label2, "class", "svelte-kw4tmt");
-    			add_location(label2, file$5, 48, 8, 1071);
+    			add_location(label2, file$5, 48, 8, 1074);
     			attr_dev(li2, "class", "svelte-kw4tmt");
-    			add_location(li2, file$5, 39, 4, 858);
+    			add_location(li2, file$5, 39, 4, 861);
     			attr_dev(input3, "type", "radio");
     			attr_dev(input3, "id", "num4");
     			attr_dev(input3, "name", "rating");
     			input3.value = "4";
     			input3.checked = input3_checked_value = /*selected*/ ctx[0] === 4;
     			attr_dev(input3, "class", "svelte-kw4tmt");
-    			add_location(input3, file$5, 51, 8, 1129);
+    			add_location(input3, file$5, 51, 8, 1132);
     			attr_dev(label3, "for", "num4");
     			attr_dev(label3, "class", "svelte-kw4tmt");
-    			add_location(label3, file$5, 59, 8, 1328);
+    			add_location(label3, file$5, 59, 8, 1331);
     			attr_dev(li3, "class", "svelte-kw4tmt");
-    			add_location(li3, file$5, 50, 4, 1115);
+    			add_location(li3, file$5, 50, 4, 1118);
     			attr_dev(input4, "type", "radio");
     			attr_dev(input4, "id", "num5");
     			attr_dev(input4, "name", "rating");
     			input4.value = "5";
     			input4.checked = input4_checked_value = /*selected*/ ctx[0] === 5;
     			attr_dev(input4, "class", "svelte-kw4tmt");
-    			add_location(input4, file$5, 62, 8, 1386);
+    			add_location(input4, file$5, 62, 8, 1389);
     			attr_dev(label4, "for", "num5");
     			attr_dev(label4, "class", "svelte-kw4tmt");
-    			add_location(label4, file$5, 70, 8, 1585);
+    			add_location(label4, file$5, 70, 8, 1588);
     			attr_dev(li4, "class", "svelte-kw4tmt");
-    			add_location(li4, file$5, 61, 4, 1372);
+    			add_location(li4, file$5, 61, 4, 1375);
     			attr_dev(input5, "type", "radio");
     			attr_dev(input5, "id", "num6");
     			attr_dev(input5, "name", "rating");
     			input5.value = "6";
     			input5.checked = input5_checked_value = /*selected*/ ctx[0] === 6;
     			attr_dev(input5, "class", "svelte-kw4tmt");
-    			add_location(input5, file$5, 73, 8, 1643);
+    			add_location(input5, file$5, 73, 8, 1646);
     			attr_dev(label5, "for", "num6");
     			attr_dev(label5, "class", "svelte-kw4tmt");
-    			add_location(label5, file$5, 81, 8, 1842);
+    			add_location(label5, file$5, 81, 8, 1845);
     			attr_dev(li5, "class", "svelte-kw4tmt");
-    			add_location(li5, file$5, 72, 4, 1629);
+    			add_location(li5, file$5, 72, 4, 1632);
     			attr_dev(input6, "type", "radio");
     			attr_dev(input6, "id", "num7");
     			attr_dev(input6, "name", "rating");
     			input6.value = "7";
     			input6.checked = input6_checked_value = /*selected*/ ctx[0] === 7;
     			attr_dev(input6, "class", "svelte-kw4tmt");
-    			add_location(input6, file$5, 84, 8, 1900);
+    			add_location(input6, file$5, 84, 8, 1903);
     			attr_dev(label6, "for", "num7");
     			attr_dev(label6, "class", "svelte-kw4tmt");
-    			add_location(label6, file$5, 92, 8, 2099);
+    			add_location(label6, file$5, 92, 8, 2102);
     			attr_dev(li6, "class", "svelte-kw4tmt");
-    			add_location(li6, file$5, 83, 4, 1886);
+    			add_location(li6, file$5, 83, 4, 1889);
     			attr_dev(input7, "type", "radio");
     			attr_dev(input7, "id", "num8");
     			attr_dev(input7, "name", "rating");
     			input7.value = "8";
     			input7.checked = input7_checked_value = /*selected*/ ctx[0] === 8;
     			attr_dev(input7, "class", "svelte-kw4tmt");
-    			add_location(input7, file$5, 95, 8, 2157);
+    			add_location(input7, file$5, 95, 8, 2160);
     			attr_dev(label7, "for", "num8");
     			attr_dev(label7, "class", "svelte-kw4tmt");
-    			add_location(label7, file$5, 103, 8, 2356);
+    			add_location(label7, file$5, 103, 8, 2359);
     			attr_dev(li7, "class", "svelte-kw4tmt");
-    			add_location(li7, file$5, 94, 4, 2143);
+    			add_location(li7, file$5, 94, 4, 2146);
     			attr_dev(input8, "type", "radio");
     			attr_dev(input8, "id", "num9");
     			attr_dev(input8, "name", "rating");
     			input8.value = "9";
     			input8.checked = input8_checked_value = /*selected*/ ctx[0] === 9;
     			attr_dev(input8, "class", "svelte-kw4tmt");
-    			add_location(input8, file$5, 106, 8, 2414);
+    			add_location(input8, file$5, 106, 8, 2417);
     			attr_dev(label8, "for", "num9");
     			attr_dev(label8, "class", "svelte-kw4tmt");
-    			add_location(label8, file$5, 114, 8, 2613);
+    			add_location(label8, file$5, 114, 8, 2616);
     			attr_dev(li8, "class", "svelte-kw4tmt");
-    			add_location(li8, file$5, 105, 4, 2400);
+    			add_location(li8, file$5, 105, 4, 2403);
     			attr_dev(input9, "type", "radio");
     			attr_dev(input9, "id", "num10");
     			attr_dev(input9, "name", "rating");
     			input9.value = "10";
     			input9.checked = input9_checked_value = /*selected*/ ctx[0] === 10;
     			attr_dev(input9, "class", "svelte-kw4tmt");
-    			add_location(input9, file$5, 117, 8, 2671);
+    			add_location(input9, file$5, 117, 8, 2674);
     			attr_dev(label9, "for", "num10");
     			attr_dev(label9, "class", "svelte-kw4tmt");
-    			add_location(label9, file$5, 125, 8, 2873);
+    			add_location(label9, file$5, 125, 8, 2876);
     			attr_dev(li9, "class", "svelte-kw4tmt");
-    			add_location(li9, file$5, 116, 4, 2657);
+    			add_location(li9, file$5, 116, 4, 2660);
     			attr_dev(ul, "class", "rating svelte-kw4tmt");
-    			add_location(ul, file$5, 16, 0, 319);
+    			add_location(ul, file$5, 16, 0, 322);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1692,9 +1698,11 @@ var app = (function () {
     }
 
     /* src\components\FeedbackForm.svelte generated by Svelte v3.47.0 */
+
+    const { console: console_1 } = globals;
     const file$4 = "src\\components\\FeedbackForm.svelte";
 
-    // (58:12) <Button disabled={btnDisabled} type="submit">
+    // (75:12) <Button disabled={btnDisabled} type="submit">
     function create_default_slot_1(ctx) {
     	let t;
 
@@ -1714,14 +1722,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(58:12) <Button disabled={btnDisabled} type=\\\"submit\\\">",
+    		source: "(75:12) <Button disabled={btnDisabled} type=\\\"submit\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (60:8) {#if mensaje}
+    // (77:8) {#if mensaje}
     function create_if_block(ctx) {
     	let div;
     	let t;
@@ -1730,8 +1738,8 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			t = text(/*mensaje*/ ctx[2]);
-    			attr_dev(div, "class", "message svelte-ixxn25");
-    			add_location(div, file$4, 60, 12, 1788);
+    			attr_dev(div, "class", "message svelte-o47tkv");
+    			add_location(div, file$4, 77, 12, 2331);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1749,14 +1757,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(60:8) {#if mensaje}",
+    		source: "(77:8) {#if mensaje}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (45:0) <Card>
+    // (62:0) <Card>
     function create_default_slot$1(ctx) {
     	let header;
     	let t1;
@@ -1800,15 +1808,15 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t4 = space();
     			if (if_block) if_block.c();
-    			attr_dev(header, "class", "svelte-ixxn25");
-    			add_location(header, file$4, 45, 4, 1190);
+    			attr_dev(header, "class", "svelte-o47tkv");
+    			add_location(header, file$4, 62, 4, 1733);
     			attr_dev(input, "type", "text");
     			attr_dev(input, "placeholder", "Cuentanos que te gusto");
-    			attr_dev(input, "class", "svelte-ixxn25");
-    			add_location(input, file$4, 51, 12, 1481);
-    			attr_dev(div, "class", "input-group svelte-ixxn25");
-    			add_location(div, file$4, 50, 8, 1442);
-    			add_location(form, file$4, 46, 4, 1248);
+    			attr_dev(input, "class", "svelte-o47tkv");
+    			add_location(input, file$4, 68, 12, 2024);
+    			attr_dev(div, "class", "input-group svelte-o47tkv");
+    			add_location(div, file$4, 67, 8, 1985);
+    			add_location(form, file$4, 63, 4, 1791);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, header, anchor);
@@ -1889,7 +1897,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(45:0) <Card>",
+    		source: "(62:0) <Card>",
     		ctx
     	});
 
@@ -1976,7 +1984,7 @@ var app = (function () {
     		rating = e.detail;
     	};
 
-    	const handleSubmit = () => {
+    	const handleSubmit = async () => {
     		if (text.trim().length > min) {
     			const nuevoFeedback = {
     				id: v4(), //custom id random
@@ -1984,6 +1992,22 @@ var app = (function () {
     				rating, //unary operator
     				
     			};
+
+    			const d = async () => {
+    				const rawResponse = await fetch("items", {
+    					method: "POST",
+    					headers: {
+    						Accept: "application/json",
+    						"Content-Type": "application/json"
+    					},
+    					body: JSON.stringify(nuevoFeedback)
+    				});
+
+    				const content = await rawResponse.json();
+    				console.log(content);
+    			};
+
+    			d();
 
     			FeedbackStore.update(currentFeedback => {
     				return [nuevoFeedback, ...currentFeedback];
@@ -1996,7 +2020,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<FeedbackForm> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<FeedbackForm> was created with unknown prop '${key}'`);
     	});
 
     	function input_input_handler() {
@@ -2503,6 +2527,7 @@ var app = (function () {
     	let t2;
     	let h41;
     	let t3;
+    	let t4_value = (isNaN(/*avg*/ ctx[1]) ? 0 : /*avg*/ ctx[1]) + "";
     	let t4;
 
     	const block = {
@@ -2514,7 +2539,7 @@ var app = (function () {
     			t2 = space();
     			h41 = element("h4");
     			t3 = text("Rating Promedio: ");
-    			t4 = text(/*avg*/ ctx[1]);
+    			t4 = text(t4_value);
     			add_location(h40, file$1, 14, 4, 490);
     			add_location(h41, file$1, 15, 4, 520);
     			attr_dev(div, "class", "feedback-stats svelte-e1d7fg");
@@ -2535,7 +2560,7 @@ var app = (function () {
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*count*/ 1) set_data_dev(t0, /*count*/ ctx[0]);
-    			if (dirty & /*avg*/ 2) set_data_dev(t4, /*avg*/ ctx[1]);
+    			if (dirty & /*avg*/ 2 && t4_value !== (t4_value = (isNaN(/*avg*/ ctx[1]) ? 0 : /*avg*/ ctx[1]) + "")) set_data_dev(t4, t4_value);
     		},
     		i: noop,
     		o: noop,

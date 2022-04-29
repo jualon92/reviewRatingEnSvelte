@@ -13,7 +13,7 @@
 
 <div class="feedback-stats">
     <h4>{count} Reviews</h4>
-    <h4>Rating Promedio: {avg}</h4>
+    <h4>Rating Promedio: {isNaN(avg) ? 0 : avg}</h4>
 </div>
 
 <style>

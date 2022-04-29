@@ -4,6 +4,7 @@ import itema from "../model/items_mongodb.js" //mongoose schema
 
 const router = express.Router()
  
+ 
 
 const getitems = (req,res) => {
     itema.find() //all
@@ -12,10 +13,16 @@ const getitems = (req,res) => {
     
 }
  
+const saveitem = async (req,res) => {
+     console.log(req.body)
+     const nuevoItem = new itema(req.body)
+     nuevoItem.save()
+    
+}
  
-
+ 
 router.route("/delete/:id").delete()
 
 router.route("/update/:id").put()
 
-export default {getitems} 
+export default {getitems,saveitem} 
