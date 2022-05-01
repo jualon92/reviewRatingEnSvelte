@@ -20,9 +20,21 @@ const saveitem = async (req,res) => {
     
 }
  
+const deleteitem =  async (req,res) => {
+    console.log("borrando ", req.body)
+    
+    const idBuscado = req.body.id
+    itema.deleteOne({ id: idBuscado},  function(err, result) {
+        if (err) {
+          res.send(err);
+        } else {
+          res.send(result);
+        }
+      })
+}
  
 router.route("/delete/:id").delete()
 
 router.route("/update/:id").put()
 
-export default {getitems,saveitem} 
+export default {getitems,saveitem,deleteitem} 

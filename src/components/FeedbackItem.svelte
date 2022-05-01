@@ -4,11 +4,29 @@
   export let item;
 
   const handleDelete = (itemID) => {
+    //back
+    console.log("s")
+    const d = async () => {
+      const rawResponse = await fetch("items", {
+        method: "DELETE",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body:  JSON.stringify({id:itemID}),
+      });
+      const content = await rawResponse.json();
+      console.log(rawResponse)
+      console.log(content);
+    };
+
+    d();
+    console.log(itemID)
+    //client side
     FeedbackStore.update((currentFeedback) => {
       return currentFeedback.filter((item) => item.id != itemID); //lista sin parametro
     });
   };
-  
 </script>
 
 <Card>
