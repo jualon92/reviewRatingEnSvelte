@@ -11,14 +11,16 @@
         position: relative;
         color: #333;
         margin: 20px 0px;
-
-        
+    }
+    @media (max-width: 350px) {
+        .card {
+            padding: 40px 15px;
+        }
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 400px) {
         .card {
-            padding-left: 1.2rem;
-            padding-right: 1.2rem;
+            padding: 40px 15px;
         }
     }
 </style>

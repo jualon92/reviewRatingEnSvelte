@@ -76,4 +76,6 @@
   .text-display {
     line-break: anywhere;
   }
+
+  
 </style>

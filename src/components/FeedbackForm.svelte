@@ -65,6 +65,7 @@
 </script>
 
 <Card>
+    
     <header class="flow-text">Como calificarias nuestro servicio?</header>
     <form on:submit|preventDefault={handleSubmit}>
         <RatingSelect on:rating-select={handleSelect} />
@@ -92,6 +93,7 @@
 </Card>
 
 <style>
+    
     header {
         max-width: 400px;
         margin: auto;

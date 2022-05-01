@@ -1019,7 +1019,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			if (default_slot) default_slot.c();
-    			attr_dev(div, "class", "card svelte-4nb83n");
+    			attr_dev(div, "class", "card svelte-131odc5");
     			add_location(div, file$7, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -1714,7 +1714,7 @@ var app = (function () {
     const { console: console_1$1 } = globals;
     const file$4 = "src\\components\\FeedbackForm.svelte";
 
-    // (86:8) {#if mensaje}
+    // (87:8) {#if mensaje}
     function create_if_block(ctx) {
     	let div;
     	let t;
@@ -1723,8 +1723,8 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			t = text(/*mensaje*/ ctx[2]);
-    			attr_dev(div, "class", "message svelte-1eyun7d");
-    			add_location(div, file$4, 86, 12, 2607);
+    			attr_dev(div, "class", "message svelte-47w6jx");
+    			add_location(div, file$4, 87, 12, 2613);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1742,7 +1742,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(86:8) {#if mensaje}",
+    		source: "(87:8) {#if mensaje}",
     		ctx
     	});
 
@@ -1784,19 +1784,19 @@ var app = (function () {
     			t4 = text("Enviar");
     			t5 = space();
     			if (if_block) if_block.c();
-    			attr_dev(header, "class", "flow-text svelte-1eyun7d");
-    			add_location(header, file$4, 67, 4, 1878);
+    			attr_dev(header, "class", "flow-text svelte-47w6jx");
+    			add_location(header, file$4, 68, 4, 1884);
     			attr_dev(input, "type", "text");
     			attr_dev(input, "placeholder", "Cuentanos que te gusto");
-    			attr_dev(input, "class", "svelte-1eyun7d");
-    			add_location(input, file$4, 73, 12, 2187);
-    			attr_dev(button, "class", "btn-enviar waves-effect waves-light btn svelte-1eyun7d");
+    			attr_dev(input, "class", "svelte-47w6jx");
+    			add_location(input, file$4, 74, 12, 2193);
+    			attr_dev(button, "class", "btn-enviar waves-effect waves-light btn svelte-47w6jx");
     			button.disabled = /*btnDisabled*/ ctx[1];
     			attr_dev(button, "type", "submit");
-    			add_location(button, file$4, 79, 12, 2381);
-    			attr_dev(div, "class", "input-group svelte-1eyun7d");
-    			add_location(div, file$4, 72, 8, 2148);
-    			add_location(form, file$4, 68, 4, 1954);
+    			add_location(button, file$4, 80, 12, 2387);
+    			attr_dev(div, "class", "input-group svelte-47w6jx");
+    			add_location(div, file$4, 73, 8, 2154);
+    			add_location(form, file$4, 69, 4, 1960);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, header, anchor);
@@ -2127,13 +2127,13 @@ var app = (function () {
     			t4 = text(t4_value);
     			t5 = space();
     			p1 = element("p");
-    			attr_dev(div, "class", "num-display svelte-1wa40sy");
+    			attr_dev(div, "class", "num-display svelte-e1z47m");
     			add_location(div, file$3, 37, 2, 977);
     			attr_dev(i, "class", "material-icons");
     			add_location(i, file$3, 41, 4, 1102);
-    			attr_dev(button, "class", "close svelte-1wa40sy");
+    			attr_dev(button, "class", "close svelte-e1z47m");
     			add_location(button, file$3, 40, 2, 1035);
-    			attr_dev(p0, "class", "text-display flow-text svelte-1wa40sy");
+    			attr_dev(p0, "class", "text-display flow-text svelte-e1z47m");
     			add_location(p0, file$3, 43, 2, 1154);
     			add_location(p1, file$3, 46, 2, 1217);
     		},

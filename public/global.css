@@ -64,7 +64,12 @@ ul {
      
 @media (min-width: 340px) and (max-width:400px) {
   .container{
-    padding: 0;
+        width: auto!important;
   }
 }
  
+@media (min-width: 1300px) {
+  .container{
+    max-width: 50%!important;
+  }
+}
