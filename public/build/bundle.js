@@ -1019,7 +1019,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			if (default_slot) default_slot.c();
-    			attr_dev(div, "class", "card svelte-131odc5");
+    			attr_dev(div, "class", "card svelte-vkkjab");
     			add_location(div, file$7, 0, 0, 0);
     		},
     		l: function claim(nodes) {

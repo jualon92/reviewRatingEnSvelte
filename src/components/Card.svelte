@@ -12,15 +12,11 @@
         color: #333;
         margin: 20px 0px;
     }
-    @media (max-width: 350px) {
+    @media (max-width: 480px) {
         .card {
             padding: 40px 15px;
         }
     }
 
-    @media (max-width: 400px) {
-        .card {
-            padding: 40px 15px;
-        }
-    }
+   
 </style>
