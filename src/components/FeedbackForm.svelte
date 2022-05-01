@@ -31,6 +31,8 @@
     const handleSubmit = async () => {
          
         M.toast({html: 'Comentario enviado!',  displayLength: 2000, outDuration:800} )
+      
+        //refactor, feo.
         if (text.trim().length > min) {
             const nuevoFeedback = {
                 id: uuidv4(), //custom id random
