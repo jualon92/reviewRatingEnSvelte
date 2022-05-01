@@ -90,6 +90,7 @@
     }
 
     .input-group {
+        gap: 5px;
         display: flex;
         flex-direction: row;
         border: 1px solid #ccc;
@@ -102,6 +103,13 @@
         border: none;
         font-size: 16px;
     }
+
+    @media (max-width: 390px){
+        input{
+            margin-left:-5px;
+        }
+    } 
+    
     input:focus {
         outline: none;
     }
