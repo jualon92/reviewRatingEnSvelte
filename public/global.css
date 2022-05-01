@@ -32,22 +32,39 @@ ul {
 @media (max-width: 700px) {
   .container{
     margin-top:60px;
+    
   }
 
   h4{
     font-size:1.3rem!important;
   }
 }
+@media (min-width: 2000px) {
+  .container{
+    max-width: 900px!important;
+  }
+ 
+}
 
  
-@media (max-width: 380px) {
+@media (max-width: 360px) {
   .container{
     padding:5px 10px;
     margin: 15px;
-    width: auto;
+    width: auto!important;
   }
 }
 
-   
- 
+@media (min-width: 400px) {
+  .container{
+    margin-top:4rem!important;
+  }
+}
+
+     
+@media (min-width: 340px) and (max-width:400px) {
+  .container{
+    padding: 0;
+  }
+}
  
