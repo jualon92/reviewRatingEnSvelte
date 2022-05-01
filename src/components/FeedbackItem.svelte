@@ -11,7 +11,8 @@
     });
 
     //back, podria ir una clase http.get o http.delete
-    console.log("s")(async function () {
+     
+    (async function () {
       const rawResponse = await fetch("items", {
         method: "DELETE",
         headers: {

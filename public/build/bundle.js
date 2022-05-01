@@ -973,7 +973,7 @@ var app = (function () {
 
     const FeedbackStore = writable([]); //set a writable store 
 
-     
+
 
     const apiURL = "items";
 
@@ -988,19 +988,21 @@ var app = (function () {
             };
             lista.push(nuevoEle);
         });
-        
+
         return lista
     };
 
     async function getData() {
+
         const response = await fetch(apiURL);
         const rta = await response.json();
         console.log('Response:', rta);
-
+        document.querySelector(".contenedor-preloader").style.display = "none";
 
         const data = procesarData(rta);
         console.log("Data procesada", data);
         FeedbackStore.set(data);
+
     }
 
     getData();
@@ -2097,7 +2099,7 @@ var app = (function () {
     const { console: console_1 } = globals;
     const file$3 = "src\\components\\FeedbackItem.svelte";
 
-    // (37:0) <Card>
+    // (38:0) <Card>
     function create_default_slot(ctx) {
     	let div;
     	let t0_value = /*item*/ ctx[0].rating + "";
@@ -2128,14 +2130,14 @@ var app = (function () {
     			t5 = space();
     			p1 = element("p");
     			attr_dev(div, "class", "num-display svelte-e1z47m");
-    			add_location(div, file$3, 37, 2, 977);
+    			add_location(div, file$3, 38, 2, 968);
     			attr_dev(i, "class", "material-icons");
-    			add_location(i, file$3, 41, 4, 1102);
+    			add_location(i, file$3, 42, 4, 1093);
     			attr_dev(button, "class", "close svelte-e1z47m");
-    			add_location(button, file$3, 40, 2, 1035);
+    			add_location(button, file$3, 41, 2, 1026);
     			attr_dev(p0, "class", "text-display flow-text svelte-e1z47m");
-    			add_location(p0, file$3, 43, 2, 1154);
-    			add_location(p1, file$3, 46, 2, 1217);
+    			add_location(p0, file$3, 44, 2, 1145);
+    			add_location(p1, file$3, 47, 2, 1208);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2175,7 +2177,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(37:0) <Card>",
+    		source: "(38:0) <Card>",
     		ctx
     	});
 
@@ -2252,7 +2254,7 @@ var app = (function () {
     		});
 
     		//back, podria ir una clase http.get o http.delete
-    		console.log("s")(async function () {
+    		(async function () {
     			const rawResponse = await fetch("items", {
     				method: "DELETE",
     				headers: {
@@ -2339,7 +2341,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (10:0) {#each $FeedbackStore as fb (fb.id) }
+    // (22:0) {#each $FeedbackStore as fb (fb.id)}
     function create_each_block(key_1, ctx) {
     	let div;
     	let feedbackitem;
@@ -2360,7 +2362,7 @@ var app = (function () {
     			div = element("div");
     			create_component(feedbackitem.$$.fragment);
     			t = space();
-    			add_location(div, file$2, 10, 0, 233);
+    			add_location(div, file$2, 22, 4, 709);
     			this.first = div;
     		},
     		m: function mount(target, anchor) {
@@ -2404,7 +2406,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(10:0) {#each $FeedbackStore as fb (fb.id) }",
+    		source: "(22:0) {#each $FeedbackStore as fb (fb.id)}",
     		ctx
     	});
 
@@ -2412,6 +2414,18 @@ var app = (function () {
     }
 
     function create_fragment$2(ctx) {
+    	let div8;
+    	let div7;
+    	let div6;
+    	let div1;
+    	let div0;
+    	let t0;
+    	let div3;
+    	let div2;
+    	let t1;
+    	let div5;
+    	let div4;
+    	let t2;
     	let each_blocks = [];
     	let each_1_lookup = new Map();
     	let each_1_anchor;
@@ -2429,16 +2443,60 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			div8 = element("div");
+    			div7 = element("div");
+    			div6 = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
+    			t0 = space();
+    			div3 = element("div");
+    			div2 = element("div");
+    			t1 = space();
+    			div5 = element("div");
+    			div4 = element("div");
+    			t2 = space();
+
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
     			each_1_anchor = empty();
+    			attr_dev(div0, "class", "circle");
+    			add_location(div0, file$2, 10, 16, 382);
+    			attr_dev(div1, "class", "circle-clipper left");
+    			add_location(div1, file$2, 9, 12, 331);
+    			attr_dev(div2, "class", "circle");
+    			add_location(div2, file$2, 13, 16, 479);
+    			attr_dev(div3, "class", "gap-patch");
+    			add_location(div3, file$2, 12, 12, 438);
+    			attr_dev(div4, "class", "circle");
+    			add_location(div4, file$2, 16, 16, 587);
+    			attr_dev(div5, "class", "circle-clipper right");
+    			add_location(div5, file$2, 15, 12, 535);
+    			attr_dev(div6, "class", "spinner-layer spinner-blue-only");
+    			add_location(div6, file$2, 8, 8, 272);
+    			attr_dev(div7, "class", "preloader-wrapper big active");
+    			add_location(div7, file$2, 7, 4, 220);
+    			attr_dev(div8, "class", "contenedor-preloader svelte-kmk0om");
+    			add_location(div8, file$2, 6, 0, 180);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, div8, anchor);
+    			append_dev(div8, div7);
+    			append_dev(div7, div6);
+    			append_dev(div6, div1);
+    			append_dev(div1, div0);
+    			append_dev(div6, t0);
+    			append_dev(div6, div3);
+    			append_dev(div3, div2);
+    			append_dev(div6, t1);
+    			append_dev(div6, div5);
+    			append_dev(div5, div4);
+    			insert_dev(target, t2, anchor);
+
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(target, anchor);
     			}
@@ -2473,6 +2531,9 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div8);
+    			if (detaching) detach_dev(t2);
+
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].d(detaching);
     			}
