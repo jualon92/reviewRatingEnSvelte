@@ -4,7 +4,7 @@
 	import FeedbackStats from "./components/FeedbackStats.svelte";
 </script>
 
-<main class="container browser-default ">
+<main class="container-main browser-default ">
 	<FeedbackForm />
 	<FeedbackStats />
 	<FeedbackList />
