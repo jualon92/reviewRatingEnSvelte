@@ -75,7 +75,7 @@
   }
 
   .text-display {
-    line-break: anywhere;
+    line-break: auto;
   }
 
   
