@@ -68,7 +68,7 @@ ul {
      
 @media (min-width: 340px) and (max-width:400px) {
   .container{
-        
+    padding: unset;
   }
 }
  
