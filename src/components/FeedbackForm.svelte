@@ -16,9 +16,11 @@
         if (text.trim().length <= min) {
             mensaje = `Mensaje de al menos ${min} caracteres`;
             btnDisabled = true;
+            
         } else {
             btnDisabled = false;
             mensaje = null;
+            
         }
     };
 
@@ -27,13 +29,14 @@
     };
 
     const handleSubmit = async () => {
+         
+        M.toast({html: 'Comentario enviado!',  displayLength: 2000, outDuration:800} )
         if (text.trim().length > min) {
             const nuevoFeedback = {
                 id: uuidv4(), //custom id random
                 text,
                 rating: rating, //unary operator
             };
-
 
             const d = async () => {
                 const rawResponse = await fetch("items", {
@@ -42,14 +45,14 @@
                         Accept: "application/json",
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify(nuevoFeedback)
+                    body: JSON.stringify(nuevoFeedback),
                 });
                 const content = await rawResponse.json();
-                
+
                 console.log(content);
             };
 
-            d()
+            d();
             FeedbackStore.update((currentFeedback) => {
                 return [nuevoFeedback, ...currentFeedback];
             });
@@ -60,7 +63,7 @@
 </script>
 
 <Card>
-    <header>Como calificarias nuestro servicio?</header>
+    <header class="flow-text">Como calificarias nuestro servicio?</header>
     <form on:submit|preventDefault={handleSubmit}>
         <RatingSelect on:rating-select={handleSelect} />
         <!--me das parametro, y trabajo aca. -->
@@ -72,7 +75,11 @@
                 bind:value={text}
                 placeholder="Cuentanos que te gusto"
             />
-            <Button disabled={btnDisabled} type="submit">Enviar</Button>
+            <button
+                class="btn-enviar waves-effect waves-light btn"
+                disabled={btnDisabled}
+                type="submit">Enviar</button
+            >
         </div>
         {#if mensaje}
             <div class="message">
@@ -88,7 +95,14 @@
         margin: auto;
         text-align: center;
     }
-
+    .btn-enviar {
+        border-radius: 8px;
+        align-self: center;
+        text-align: center;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: center;
+    }
     .input-group {
         gap: 5px;
         display: flex;
@@ -104,12 +118,12 @@
         font-size: 16px;
     }
 
-    @media (max-width: 390px){
-        input{
-            margin-left:-5px;
+    @media (max-width: 390px) {
+        input {
+            margin-left: -5px;
         }
-    } 
-    
+    }
+
     input:focus {
         outline: none;
     }

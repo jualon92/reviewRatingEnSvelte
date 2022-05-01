@@ -14,10 +14,11 @@
     };
 </script>
 
+ 
 <ul class="rating">
     <div class="rating-row">
         <li>
-            <input
+            <input   
                 type="radio"
                 id="num1"
                 name="rating"
@@ -25,7 +26,8 @@
                 on:change={onChange}
                 checked={selected === 1}
             />
-            <label for="num1">1</label>
+            <label for="num1"  class="waves-effect waves-light" >1</label>
+            
         </li>
         <li>
             <input
@@ -36,7 +38,7 @@
                 on:change={onChange}
                 checked={selected === 2}
             />
-            <label for="num2">2</label>
+            <label for="num2" class="waves-effect waves-light" >2</label>
         </li>
         <li>
             <input
@@ -47,7 +49,7 @@
                 on:change={onChange}
                 checked={selected === 3}
             />
-            <label for="num3">3</label>
+            <label for="num3" class="waves-effect waves-light" >3</label>
         </li>
         <li>
             <input
@@ -58,7 +60,7 @@
                 on:change={onChange}
                 checked={selected === 4}
             />
-            <label for="num4">4</label>
+            <label for="num4" class="waves-effect waves-light" >4</label>
         </li>
         <li>
             <input
@@ -69,7 +71,7 @@
                 on:change={onChange}
                 checked={selected === 5}
             />
-            <label for="num5">5</label>
+            <label for="num5" class="waves-effect waves-light" >5</label>
         </li>
     </div>
     <div class="rating-row">
@@ -82,7 +84,7 @@
                 on:change={onChange}
                 checked={selected === 6}
             />
-            <label for="num6">6</label>
+            <label for="num6" class="waves-effect waves-light" >6</label>
         </li>
         <li>
             <input
@@ -93,7 +95,7 @@
                 on:change={onChange}
                 checked={selected === 7}
             />
-            <label for="num7">7</label>
+            <label for="num7" class="waves-effect waves-light" >7</label>
         </li>
         <li>
             <input
@@ -104,7 +106,7 @@
                 on:change={onChange}
                 checked={selected === 8}
             />
-            <label for="num8">8</label>
+            <label for="num8" class="waves-effect waves-light" >8</label>
         </li>
         <li>
             <input
@@ -115,7 +117,7 @@
                 on:change={onChange}
                 checked={selected === 9}
             />
-            <label for="num9">9</label>
+            <label for="num9" class="waves-effect waves-light" >9</label>
         </li>
         <li>
             <input
@@ -126,7 +128,7 @@
                 on:change={onChange}
                 checked={selected === 10}
             />
-            <label for="num10">10</label>
+            <label for="num10" class="waves-effect waves-light" >10</label>
         </li>
     </div>
 </ul>
@@ -168,6 +170,7 @@
         border-radius: 50%;
         transform: translate(-50%, -50%);
         cursor: pointer;
+        font-size:unset;
     }
     .rating li:hover {
         background: #ff6a95;

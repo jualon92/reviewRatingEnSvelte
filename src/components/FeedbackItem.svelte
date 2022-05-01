@@ -4,24 +4,29 @@
   export let item;
 
   const handleDelete = (itemID) => {
-    //back
-    console.log("s")
-    const d = async () => {
+    M.toast({
+      html: "Comentario borrado!",
+      displayLength: 1000,
+      outDuration: 800,
+    });
+
+    //back, podria ir una clase http.get o http.delete
+    console.log("s")(async function () {
       const rawResponse = await fetch("items", {
         method: "DELETE",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body:  JSON.stringify({id:itemID}),
+        body: JSON.stringify({ id: itemID }),
       });
       const content = await rawResponse.json();
-      console.log(rawResponse)
+      console.log(rawResponse);
       console.log(content);
-    };
+    })();
 
-    d();
-    console.log(itemID)
+    // d();
+    console.log(itemID);
     //client side
     FeedbackStore.update((currentFeedback) => {
       return currentFeedback.filter((item) => item.id != itemID); //lista sin parametro
@@ -33,8 +38,10 @@
   <div class="num-display">
     {item.rating}
   </div>
-  <button class="close" on:click={() => handleDelete(item.id)}>X</button>
-  <p class="text-display">
+  <button class="close" on:click={() => handleDelete(item.id)}>
+    <i class="material-icons">clear</i></button
+  >
+  <p class="text-display flow-text">
     {item.text}
   </p>
   <p /></Card
@@ -64,5 +71,9 @@
     border: none;
     background: none;
     border: none;
+  }
+
+  .text-display {
+    line-break: anywhere;
   }
 </style>
