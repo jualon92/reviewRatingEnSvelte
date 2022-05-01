@@ -2099,7 +2099,7 @@ var app = (function () {
     const { console: console_1 } = globals;
     const file$3 = "src\\components\\FeedbackItem.svelte";
 
-    // (37:0) <Card>
+    // (38:0) <Card>
     function create_default_slot(ctx) {
     	let div;
     	let t0_value = /*item*/ ctx[0].rating + "";
@@ -2129,15 +2129,15 @@ var app = (function () {
     			t4 = text(t4_value);
     			t5 = space();
     			p1 = element("p");
-    			attr_dev(div, "class", "num-display svelte-e1z47m");
-    			add_location(div, file$3, 37, 2, 977);
+    			attr_dev(div, "class", "num-display svelte-16gpxbk");
+    			add_location(div, file$3, 38, 2, 968);
     			attr_dev(i, "class", "material-icons");
-    			add_location(i, file$3, 41, 4, 1102);
-    			attr_dev(button, "class", "close svelte-e1z47m");
-    			add_location(button, file$3, 40, 2, 1035);
-    			attr_dev(p0, "class", "text-display flow-text svelte-e1z47m");
-    			add_location(p0, file$3, 43, 2, 1154);
-    			add_location(p1, file$3, 46, 2, 1217);
+    			add_location(i, file$3, 42, 4, 1093);
+    			attr_dev(button, "class", "close svelte-16gpxbk");
+    			add_location(button, file$3, 41, 2, 1026);
+    			attr_dev(p0, "class", "text-display flow-text svelte-16gpxbk");
+    			add_location(p0, file$3, 44, 2, 1145);
+    			add_location(p1, file$3, 47, 2, 1208);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2177,7 +2177,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(37:0) <Card>",
+    		source: "(38:0) <Card>",
     		ctx
     	});
 
@@ -2254,7 +2254,7 @@ var app = (function () {
     		});
 
     		//back, podria ir una clase http.get o http.delete
-    		console.log("s")(async function () {
+    		(async function () {
     			const rawResponse = await fetch("items", {
     				method: "DELETE",
     				headers: {
@@ -2341,7 +2341,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (23:0) {#each $FeedbackStore as fb (fb.id) }
+    // (22:0) {#each $FeedbackStore as fb (fb.id) }
     function create_each_block(key_1, ctx) {
     	let div;
     	let feedbackitem;
@@ -2362,7 +2362,7 @@ var app = (function () {
     			div = element("div");
     			create_component(feedbackitem.$$.fragment);
     			t = space();
-    			add_location(div, file$2, 23, 0, 686);
+    			add_location(div, file$2, 22, 0, 678);
     			this.first = div;
     		},
     		m: function mount(target, anchor) {
@@ -2406,7 +2406,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(23:0) {#each $FeedbackStore as fb (fb.id) }",
+    		source: "(22:0) {#each $FeedbackStore as fb (fb.id) }",
     		ctx
     	});
 
@@ -2462,23 +2462,23 @@ var app = (function () {
 
     			each_1_anchor = empty();
     			attr_dev(div0, "class", "circle");
-    			add_location(div0, file$2, 13, 12, 389);
+    			add_location(div0, file$2, 10, 12, 377);
     			attr_dev(div1, "class", "circle-clipper left");
-    			add_location(div1, file$2, 12, 10, 342);
+    			add_location(div1, file$2, 9, 10, 330);
     			attr_dev(div2, "class", "circle");
-    			add_location(div2, file$2, 15, 12, 470);
+    			add_location(div2, file$2, 12, 12, 458);
     			attr_dev(div3, "class", "gap-patch");
-    			add_location(div3, file$2, 14, 16, 433);
+    			add_location(div3, file$2, 11, 16, 421);
     			attr_dev(div4, "class", "circle");
-    			add_location(div4, file$2, 17, 12, 562);
+    			add_location(div4, file$2, 14, 12, 550);
     			attr_dev(div5, "class", "circle-clipper right");
-    			add_location(div5, file$2, 16, 16, 514);
+    			add_location(div5, file$2, 13, 16, 502);
     			attr_dev(div6, "class", "spinner-layer spinner-blue-only");
-    			add_location(div6, file$2, 11, 8, 285);
+    			add_location(div6, file$2, 8, 8, 273);
     			attr_dev(div7, "class", "preloader-wrapper big active");
-    			add_location(div7, file$2, 10, 4, 233);
+    			add_location(div7, file$2, 7, 4, 221);
     			attr_dev(div8, "class", "contenedor-preloader svelte-h9n3yy");
-    			add_location(div8, file$2, 9, 0, 193);
+    			add_location(div8, file$2, 6, 0, 181);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
