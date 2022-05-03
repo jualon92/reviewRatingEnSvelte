@@ -16,10 +16,13 @@ const procesarData = (listaJSON) => {
             "rating": Number(eleDB.rating),
             "text": eleDB.text
         }
+         
         lista.push(nuevoEle)
     });
-
-    return lista
+    
+    //quiero lista de menor antiguedad a mayor, doy vuelta
+    lista.reverse() 
+    return lista 
 }
 
 async function getData() {

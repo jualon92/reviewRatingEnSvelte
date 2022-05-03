@@ -931,6 +931,38 @@ var app = (function () {
       return stringify(rnds);
     }
 
+    class Http {
+
+        static deleteItemByID = async (itemID) => {
+            await fetch("items", {
+                method: "DELETE",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ id: itemID }),
+            });
+            const content = await rawResponse.json();
+
+            console.log(content);
+        }
+
+
+        static postItem = async (nuevoFeedback) => {
+            const rawResponse = await fetch("items", {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(nuevoFeedback),
+            });
+            const content = await rawResponse.json();
+
+            console.log(content);
+        }
+    }
+
     const subscriber_queue = [];
     /**
      * Create a `Writable` store that allows both updating and reading by subscription.
@@ -994,10 +1026,13 @@ var app = (function () {
                 "rating": Number(eleDB.rating),
                 "text": eleDB.text
             };
+             
             lista.push(nuevoEle);
         });
-
-        return lista
+        
+        //quiero lista de menor antiguedad a mayor, doy vuelta
+        lista.reverse(); 
+        return lista 
     };
 
     async function getData() {
@@ -1743,7 +1778,7 @@ var app = (function () {
     const { console: console_1$1 } = globals;
     const file$4 = "src\\components\\FeedbackForm.svelte";
 
-    // (146:8) {#if mensaje}
+    // (122:8) {#if mensaje}
     function create_if_block(ctx) {
     	let div;
     	let t;
@@ -1753,7 +1788,7 @@ var app = (function () {
     			div = element("div");
     			t = text(/*mensaje*/ ctx[1]);
     			attr_dev(div, "class", "message svelte-gcmiis");
-    			add_location(div, file$4, 146, 12, 4528);
+    			add_location(div, file$4, 122, 12, 3801);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1771,14 +1806,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(146:8) {#if mensaje}",
+    		source: "(122:8) {#if mensaje}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (112:0) <Card>
+    // (88:0) <Card>
     function create_default_slot$1(ctx) {
     	let header;
     	let t1;
@@ -1838,33 +1873,33 @@ var app = (function () {
     			t12 = space();
     			if (if_block) if_block.c();
     			attr_dev(header, "class", "rating-header flow-text svelte-gcmiis");
-    			add_location(header, file$4, 112, 4, 3217);
+    			add_location(header, file$4, 88, 4, 2490);
     			attr_dev(input, "type", "text");
     			attr_dev(input, "contenteditable", "true");
     			attr_dev(input, "placeholder", "Cuentanos que te gusto");
     			attr_dev(input, "class", "svelte-gcmiis");
-    			add_location(input, file$4, 118, 12, 3562);
+    			add_location(input, file$4, 94, 12, 2835);
     			attr_dev(button0, "class", "btn-enviar waves-effect waves-light btn svelte-gcmiis");
     			button0.disabled = /*btnDisabled*/ ctx[0];
     			attr_dev(button0, "type", "submit");
-    			add_location(button0, file$4, 128, 12, 3853);
+    			add_location(button0, file$4, 104, 12, 3126);
     			attr_dev(div0, "class", "input-group svelte-gcmiis");
-    			add_location(div0, file$4, 117, 8, 3523);
+    			add_location(div0, file$4, 93, 8, 2796);
     			attr_dev(div1, "class", "indeterminate");
-    			add_location(div1, file$4, 135, 12, 4119);
+    			add_location(div1, file$4, 111, 12, 3392);
     			attr_dev(div2, "class", "progress svelte-gcmiis");
     			set_style(div2, "display", /*estadoBarra*/ ctx[3]);
-    			add_location(div2, file$4, 134, 8, 4052);
-    			add_location(p, file$4, 138, 12, 4254);
+    			add_location(div2, file$4, 110, 8, 3325);
+    			add_location(p, file$4, 114, 12, 3527);
     			attr_dev(i, "class", "material-icons");
-    			add_location(i, file$4, 140, 29, 4384);
+    			add_location(i, file$4, 116, 29, 3657);
     			attr_dev(button1, "class", "btn-voz waves-effect waves-light btn  svelte-gcmiis");
     			attr_dev(button1, "type", "submit");
-    			add_location(button1, file$4, 139, 12, 4286);
+    			add_location(button1, file$4, 115, 12, 3559);
     			attr_dev(form0, "class", "form-voz svelte-gcmiis");
-    			add_location(form0, file$4, 137, 8, 4178);
+    			add_location(form0, file$4, 113, 8, 3451);
     			attr_dev(form1, "class", "form-rating d svelte-gcmiis");
-    			add_location(form1, file$4, 113, 4, 3307);
+    			add_location(form1, file$4, 89, 4, 2580);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, header, anchor);
@@ -1957,7 +1992,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(112:0) <Card>",
+    		source: "(88:0) <Card>",
     		ctx
     	});
 
@@ -2044,28 +2079,19 @@ var app = (function () {
 
     	const handleVoice = e => {
     		if (estadoVoz === mensajeMediante) {
-    			console.log("text", text);
     			recognition.stop();
-
-    			//  actividad = ""
     			$$invalidate(2, estadoVoz = "Voz a Texto");
-
     			document.querySelector(".btn-voz").style = "background-color:#26A69A";
-    			console.log("texto before moments", text);
     			$$invalidate(3, estadoBarra = "none");
     		} else {
     			$$invalidate(4, text = "");
     			$$invalidate(2, estadoVoz = mensajeMediante);
     			document.querySelector(".btn-voz").style = "background-color:orange";
-
-    			// actividad = "Grabando...";
     			$$invalidate(3, estadoBarra = "block");
 
     			M.toast({
     				html: ` 
-             Grabando..
-                 
-            `
+             Grabando.. `
     			});
 
     			recognition.start();
@@ -2073,8 +2099,6 @@ var app = (function () {
     	};
 
     	const handleInput = () => {
-    		console.log("verif");
-
     		if (text.trim().length <= min) {
     			$$invalidate(1, mensaje = `Mensaje de al menos ${min} caracteres`);
     			$$invalidate(0, btnDisabled = true);
@@ -2104,21 +2128,7 @@ var app = (function () {
     				
     			};
 
-    			const d = async () => {
-    				const rawResponse = await fetch("items", {
-    					method: "POST",
-    					headers: {
-    						Accept: "application/json",
-    						"Content-Type": "application/json"
-    					},
-    					body: JSON.stringify(nuevoFeedback)
-    				});
-
-    				const content = await rawResponse.json();
-    				console.log(content);
-    			};
-
-    			d();
+    			Http.postItem(nuevoFeedback);
 
     			FeedbackStore.update(currentFeedback => {
     				return [nuevoFeedback, ...currentFeedback];
@@ -2141,6 +2151,7 @@ var app = (function () {
 
     	$$self.$capture_state = () => ({
     		uuidv4: v4,
+    		Http,
     		FeedbackStore,
     		Card,
     		Button,
@@ -2237,26 +2248,6 @@ var app = (function () {
 			opacity: ${target_opacity - (od * u)}
 		`
         };
-    }
-
-    class Http {
-
-        static deleteItemByID = async (itemID) => {
-            await fetch("items", {
-                method: "DELETE",
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ id: itemID }),
-            });
-            const content = await rawResponse.json();
-           
-            console.log(content);
-        }
-
-
-
     }
 
     /* src\components\FeedbackItem.svelte generated by Svelte v3.47.0 */

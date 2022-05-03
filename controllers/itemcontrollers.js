@@ -8,7 +8,7 @@ const router = express.Router()
 
 const getitems = (req,res) => {
     itema.find() //all
-        .then(allUsers => res.json(allUsers))
+        .then(allUsers => res.json(allUsers).reverse())
         .catch(err => res.status(400).json("error" + err))
     
 }

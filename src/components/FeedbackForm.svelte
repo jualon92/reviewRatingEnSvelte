@@ -28,36 +28,25 @@
     
     const handleVoice =  (e) => {
         if (estadoVoz === mensajeMediante) {
-            console.log("text", text)
+ 
             recognition.stop();
-          //  actividad = ""
             estadoVoz = "Voz a Texto"
             document.querySelector(".btn-voz").style = "background-color:#26A69A"
-            console.log("texto before moments", text)
-             
-            
-            estadoBarra = "none";
-           
-           
+            estadoBarra = "none"
         } else {
             text = ""
             estadoVoz = mensajeMediante;
             document.querySelector(".btn-voz").style = "background-color:orange"
-           // actividad = "Grabando...";
             estadoBarra = "block"
             M.toast({html: ` 
-             Grabando..
-                 
-            ` })
+             Grabando.. ` })
 
             recognition.start();
         }
     };
 
     const handleInput = () => {
-        console.log("verif");
         if (text.trim().length <= min) {
-           
            mensaje = `Mensaje de al menos ${min} caracteres`;
             btnDisabled = true;
         } else {
@@ -84,7 +73,7 @@
                 text,
                 rating: rating, //unary operator
             };
-
+            
             Http.postItem(nuevoFeedback)
           
             FeedbackStore.update((currentFeedback) => {
