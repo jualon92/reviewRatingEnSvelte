@@ -137,9 +137,7 @@
     .rating {
         display: flex;
         align-items: center;
-
-        margin-bottom: 30px;
-        margin-top: 30px;
+ 
         justify-content: center;
         gap:7px;
     }
@@ -193,8 +191,7 @@
             column-gap: 2px;
 
             gap: 6px;
-            margin-bottom: 30px;
-            margin-top: 30px;
+         
 
             justify-content: center;
         }
