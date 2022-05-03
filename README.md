@@ -5,6 +5,7 @@ Borrar o agregar feedback afecta Numero y Promedio de Reviews.  Se valida que co
 
  - Se utilizo Svelte (stores para administrar lista  y evitar un pasamanos de parametros) +  componentes para evitar codigo monolitico + transitions y scale de svelte)
  - Flexbox para comportamiento responsive 
+ - Web Speech Api para Voz a Texto
  - Node + Express.  Heroku CLI
  - Se sirven los comentarios desde MongoDB, y al submitear se almacena comentario en db
 
