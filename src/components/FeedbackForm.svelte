@@ -1,6 +1,6 @@
 <script>
     import { v4 as uuidv4 } from "uuid";
-
+    import Http from "../http.js"
     import { FeedbackStore } from "../stores";
     import Card from "./Card.svelte";
     import Button from "./Button.svelte";
@@ -30,8 +30,7 @@
         if (estadoVoz === mensajeMediante) {
             console.log("text", text)
             recognition.stop();
-            
-            actividad = ""
+          //  actividad = ""
             estadoVoz = "Voz a Texto"
             document.querySelector(".btn-voz").style = "background-color:#26A69A"
             console.log("texto before moments", text)
@@ -86,21 +85,8 @@
                 rating: rating, //unary operator
             };
 
-            const d = async () => {
-                const rawResponse = await fetch("items", {
-                    method: "POST",
-                    headers: {
-                        Accept: "application/json",
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(nuevoFeedback),
-                });
-                const content = await rawResponse.json();
-
-                console.log(content);
-            };
-
-            d();
+            Http.postItem(nuevoFeedback)
+          
             FeedbackStore.update((currentFeedback) => {
                 return [nuevoFeedback, ...currentFeedback];
             });

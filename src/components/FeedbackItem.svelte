@@ -1,8 +1,9 @@
 <script>
   import { FeedbackStore } from "../stores";
+  import Http from "../http.js"
   import Card from "./Card.svelte";
   export let item;
-
+  
   const handleDelete = (itemID) => {
     M.toast({
       html: "Comentario borrado!",
@@ -11,20 +12,8 @@
     });
 
     //back, podria ir una clase http.get o http.delete
-     
-    (async function () {
-      const rawResponse = await fetch("items", {
-        method: "DELETE",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ id: itemID }),
-      });
-      const content = await rawResponse.json();
-      console.log(rawResponse);
-      console.log(content);
-    })();
+    Http.deleteItemByID(itemID)
+    
 
     // d();
     console.log(itemID);
