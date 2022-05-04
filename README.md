@@ -14,8 +14,8 @@ Borrar o agregar feedback afecta Numero y Promedio de Reviews.  Se valida que co
 - Notificacion de acciones no obstructivas, que varian segun dispositivo https://materializecss.com/toasts.html
 - Efecto de ola al presionar boton  https://materializecss.com/waves.html
 
-![image](https://user-images.githubusercontent.com/46230600/165804460-b3f6c97e-b4dd-4e32-8ceb-bda8886959f5.png)
-![image](https://user-images.githubusercontent.com/46230600/165804500-9ac457f4-2cda-4173-9c67-62de17ee8651.png)
+![image](https://user-images.githubusercontent.com/46230600/166838050-2e157fc1-b21a-4ac1-b17e-c193e19a5539.png)
+![image](https://user-images.githubusercontent.com/46230600/166838129-9cb5a4ee-7114-4b63-ae37-a0da925355ed.png)
 
 
 
