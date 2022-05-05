@@ -4,10 +4,10 @@ import { writable } from "svelte/store"
 export const FeedbackStore = writable([]) //set a writable store 
 
 
-
+/*
 const apiURL = "items";
 
-
+ 
 const procesarData = (listaJSON) => {
     let lista = []
     listaJSON.forEach(eleDB => {
@@ -38,7 +38,7 @@ async function getData() {
 
 }
 
-getData();
+getData(); */ 
 
 
 

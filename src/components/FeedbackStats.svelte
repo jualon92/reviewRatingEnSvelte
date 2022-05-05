@@ -8,7 +8,7 @@
     //si no es entero que tenga una cifra signf ej:9.5, si es entero que sea sin 9.0
     const esEntero = (nro) => (nro % 1) === 0
     const getDisplay = (nro) => esEntero(nro) ? parseInt(nro) : nro.toFixed(1)
-
+    
 </script>
 
 <div class="feedback-stats">

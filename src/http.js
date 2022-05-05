@@ -1,5 +1,5 @@
 class Http {
-
+ 
     static deleteItemByID = async (itemID) => {
         await fetch("items", {
             method: "DELETE",
@@ -28,6 +28,26 @@ class Http {
 
         console.log(content);
     }
+
+    
+    static async getItems() {
+
+        const response = await fetch("items");
+        const rta = await response.json()
+        console.log('Response:', rta);
+        return rta
+     //   document.querySelector(".contenedor-preloader").style.display = "none"
+    
+     //   const data = procesarData(rta)
+     //   console.log("Data procesada", data)
+     //   FeedbackStore.set(data)
+    
+    }
+
+
+
 }
+
+ 
 
 export default Http
